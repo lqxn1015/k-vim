@@ -533,11 +533,12 @@ endif
 
 " theme主题
 set background=dark
-colorscheme solarized
 set t_Co=256
 
+"colorscheme solarized
 "colorscheme molokai
 "colorscheme desert
+colorscheme tomorrow
 
 "设置标记一列的背景颜色和数字一行颜色一致
 hi! link SignColumn   LineNr
@@ -553,5 +554,3 @@ highlight clear SpellRare
 highlight SpellRare term=underline cterm=underline
 highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
-
-
