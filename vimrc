@@ -535,10 +535,10 @@ endif
 set background=dark
 set t_Co=256
 
-"colorscheme solarized
+colorscheme solarized
 "colorscheme molokai
 "colorscheme desert
-colorscheme tomorrow
+"colorscheme tomorrow
 
 "设置标记一列的背景颜色和数字一行颜色一致
 hi! link SignColumn   LineNr
