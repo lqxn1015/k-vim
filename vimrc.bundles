@@ -485,4 +485,9 @@ Bundle "thinca/vim-quickrun"
 nnoremap <F10> :QuickRun<cr>
 
 Bundle "mileszs/ack.vim"
+
+Bundle 'tell-k/vim-autopep8'
+autocmd FileType python map <buffer> <F12> :call Autopep8()<CR>
+let g:autopep8_ignore="E501,W293"
+let g:autopep8_disable_show_diff=1
 "------------------------------------------- end of configs --------------------------------------------
