@@ -490,4 +490,9 @@ Bundle 'tell-k/vim-autopep8'
 autocmd FileType python map <buffer> <F12> :call Autopep8()<CR>
 let g:autopep8_ignore="E501,W293"
 let g:autopep8_disable_show_diff=1
+
+Bundle "maksimr/vim-jsbeautify"
+autocmd FileType html map <buffer> <F12> :call RangeHtmlBeautify()<CR>
+autocmd FileType javascript map <buffer> <F12> :call RangeJsBeautify()<cr>
+autocmd FileType css map <buffer> <F12> :call RangeCSSBeautify()<cr>
 "------------------------------------------- end of configs --------------------------------------------
