@@ -35,12 +35,9 @@ if v:version < 800
 else
     Plug 'w0rp/ale'
 endif
-Plug 'tell-k/vim-autopep8'
-autocmd FileType python map <buffer> <F12> :call Autopep8()<CR>
-let g:autopep8_ignore="E501,W293"
-let g:autopep8_disable_show_diff=1
-" let g:autopep8_on_save = 1
-let g:autopep8_max_line_length=120
+
+Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }
+
 Plug 'mileszs/ack.vim'
 
 
@@ -887,8 +884,9 @@ endif
     " pip install yapf
     " python code format
     " format all file
-    autocmd FileType python nnoremap <leader>y :0,$!yapf<Cr>
-    " format select block
+    " autocmd FileType python nnoremap <leader>y :0,$!yapf<Cr>
+    " " autocmd FileType python nnoremap <leader>y :0,$!yapf<Cr><C-o>
+    " " format select block
     " autocmd FileType python vnoremap <leader>y :!yapf<Cr>
 
     " Plug 'posva/vim-vue'
@@ -900,6 +898,7 @@ endif
     " vnoremap <silent> <leader>es :EsformatterVisual<CR>
 
 " }}}
+map <leader>y :0,$call yapf#YAPF()<Cr>
 "golang
 au FileType go nmap <leader>e <Plug>(go-rename)
 au FileType go nmap <leader>s <Plug>(go-implements)
